@@ -42,19 +42,6 @@ export default defineConfig({
   },
 
   projects: [
-    // Setup project
-    { name: 'setup', testMatch: /.*\.setup\.ts/ },
-    // Test project that requires authentication
-    {
-      name: 'authenticated',
-      testMatch: /.account\.ts/,
-      use: {
-        ...devices['Desktop Chrome'],
-        // Use prepared auth state.
-        storageState: '.auth/user.json',
-      },
-      dependencies: ['setup'],
-    },
     // Test projects that don't require authentication
     {
       name: 'chromium',
@@ -76,6 +63,19 @@ export default defineConfig({
         ...devices['Desktop Safari']
       },
       testIgnore: /api/,
+    },
+    // Setup project
+    { name: 'setup', testMatch: /.*\.setup\.ts/ },
+    // Test project that requires authentication
+    {
+      name: 'authenticated',
+      testMatch: /.account\.ts/,
+      use: {
+        ...devices['Desktop Chrome'],
+        // Use prepared auth state.
+        storageState: '.auth/user.json',
+      },
+      dependencies: ['setup'],
     },
     {
       name: 'api',
