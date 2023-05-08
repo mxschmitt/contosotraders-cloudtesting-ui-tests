@@ -1,0 +1,11 @@
+{
+  "name": "contoso-traders-tests",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "1.32.3",
+    "@types/node": "18.11.18",
+    "csv-parse": "5.3.4",
+    "dotenv": "^16.0.3"
+  }
+}
