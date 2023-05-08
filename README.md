@@ -5,6 +5,7 @@ This folder contains a stripped down version of the tests from the Contoso Trade
 ## Running the tests
 
 ```
-npm ci
 npx playwright test
 ```
+
+For more information see on [playwright.dev](https://playwright.dev/docs/intro).
